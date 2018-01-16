@@ -24,7 +24,7 @@ class requestHandler(BaseHTTPRequestHandler):
 	def do_HEAD(self):
 		self._set_Header()
 
-def run(server_class=HTTPServer,handler_class=requestHandler,port=80):
+def run(server_class=HTTPServer,handler_class=requestHandler,port=8080):
 	server_address = ('0.0.0.0',port)
 	httpd = server_class(server_address, handler_class)
 	print 'starting picker v1.0'
